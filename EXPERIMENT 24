@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+    int g[5][5]={{0,2,0,6,0},{2,0,3,8,5},{0,3,0,0,7},{6,8,0,0,9},{0,5,7,9,0}},v[5]={0},c=0,e=0,min,i,j;
+    v[0]=1;
+    while(e<4){min=999;
+      for(i=0;i<5;i++)if(v[i])for(j=0;j<5;j++)if(!v[j]&&g[i][j]&&g[i][j]<min)min=g[i][j],c=i;
+      v[c]=1;printf("Edge=%d Cost=%d\n",c,min);e++;}
+}
