@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main(){
+    int h[10]={-1},size=10,a[5]={12,22,32,42,52};
+    for(int i=0;i<5;i++){int k=a[i]%size;while(h[k]!=-1)k=(k+1)%size;h[k]=a[i];}
+    printf("Hash Table: ");for(int i=0;i<size;i++)printf("%d ",h[i]);
+}
